@@ -8,7 +8,7 @@ import pip
 pip.main(["install", "openpyxl"])
 
 
-mf0 = pd.read_excel('/content/drive/MyDrive/Base_desempenho/mediafinal.xlsx')
+mf0 = pd.read_excel('mediafinal.xlsx')
 mf = mf0.query('NOTA <= 10')
 disci = ['Automação Industrial']
 disci2 = mf.query('DISCIPLINA == @disci')
