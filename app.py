@@ -3,10 +3,10 @@ import numpy as np
 import streamlit as st
 #import plotly.express as px
 import altair as pd
-from base import *
+
 import pip
 pip.main(["install", "openpyxl"])
-from base import *
+
 
 mf0 = pd.read_excel('/content/drive/MyDrive/Base_desempenho/mediafinal.xlsx')
 mf = mf0.query('NOTA <= 10')
