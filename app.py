@@ -37,9 +37,9 @@ curso = sorted(mg.COMPLEMENTO.unique())
 curso_selecionado = st.selectbox('Curso',curso)
 curso2 = mf.query('COMPLEMENTO == @curso_selecionado ')
 
-curso2 = epr[epr['NOTA'].notna()]
+curso3 = curso2[curso2['NOTA'].notna()]
 
-grafico_geral = alt.Chart(curso2).mark_circle(size=100).encode(
+grafico_geral = alt.Chart(curso3).mark_circle(size=100).encode(
 alt.X('CODPERLET:O',scale=alt.Scale(zero=False) ,axis=alt.Axis( title='Periodo') ),
 alt.Y('NOTA',axis=alt.Axis(title='Nota', orient = "left") ),
 tooltip = ['NOME','RA'],
