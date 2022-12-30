@@ -6,7 +6,8 @@ import altair as pd
 
 import pip
 pip.main(["install", "openpyxl"])
-
+PAGE_CONFIG = {"page_title": "CIA - Centro de Inteligência do Apoio ao aluno", "page_icon": ":globe_with_meridians:", "layout": "wide"}
+st.set_page_config(**PAGE_CONFIG)
 
 mf0 = pd.read_excel('mediafinal.xlsx')
 mf = mf0.query('NOTA <= 10')
